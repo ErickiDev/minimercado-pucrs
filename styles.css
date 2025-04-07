@@ -1,0 +1,155 @@
+/* Estilos customizados */
+:root {
+    --primary-color: #28a745;
+    --secondary-color: #6c757d;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.section-title {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    margin-bottom: 20px;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.product-price {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.service-card {
+    background: white;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+.footer-links a {
+    color: var(--light-color);
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Carrossel */
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Estilos para o JavaScript */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.notification.fade-out {
+    opacity: 0;
+}
+
+#cart-count {
+    font-size: 0.7rem;
+    vertical-align: top;
+}
+
+.offer-timer-box {
+    background: var(--dark-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    min-width: 50px;
+    text-align: center;
+}
+
+.invalid-feedback {
+    color: #dc3545;
+    font-size: 0.875em;
+    margin-top: 0.25rem;
+}
+
+.is-invalid {
+    border-color: #dc3545;
+}
+
+/* Ajustes para o modal do carrinho */
+.modal-body {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 250px;
+    }
+    
+    .product-img {
+        height: 150px;
+    }
+}
